@@ -2,14 +2,6 @@ language: python
 arch:
     - amd64
     - ppc64le
-addons:
-    apt:
-       update: true
-       packages: 
-           - build-essential 
-           - libssl-dev 
-           - libffi-dev 
-           - python3-dev
 python:
     - "2.7"
     - "3.4"
@@ -24,7 +16,7 @@ install:
     # master of submodule contains differen number of english words which makes the test fail
     # Commenting it
     #- git submodule foreach git pull origin master
-    - pip install -U  coveralls # setuptools causing multiple failures in 3.6/3.7/2.7
+    - pip install coveralls # setuptools causing multiple failures in 3.6/3.7/2.7
     - python bootstrap.py
     - ./bin/buildout
 before_script:
