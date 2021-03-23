@@ -14,8 +14,8 @@ python:
     - "2.7"
     - "3.4"
     - "3.5"
-    - "3.6.3"
-    - "3.7-dev" # 3.7 development branch
+    - "3.6.3" # Using specific subversion of 3.6 which was working earlier.
+    - "3.7" # Using the stable version of 3.7
     - "nightly" # currently points to 3.7-dev
 install:
     - git submodule init
